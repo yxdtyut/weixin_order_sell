@@ -10,7 +10,7 @@ import java.util.Date;
 
 /**
  * @Author : yangxudong
- * @Description :
+ * @Description : 商品类目实体类
  * @Date : 下午9:57 2018/5/7
  */
 @Entity
@@ -21,12 +21,16 @@ public class ProductCategory {
     @GeneratedValue
     private Integer categoryId;
 
+    /**类目名字.*/
     private String categoryName;
 
+    /**类目编号.*/
     private Integer categoryType;
 
+    /**创建时间.*/
     private Date createTime;
 
+    /**修改时间.*/
     private Date updateTime;
 
     public ProductCategory(String categoryName, Integer categoryType) {

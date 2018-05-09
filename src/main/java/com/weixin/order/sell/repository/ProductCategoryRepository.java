@@ -7,7 +7,7 @@ import java.util.List;
 
 /**
  * @Author : yangxudong
- * @Description :
+ * @Description : 商品类目的repository层
  * @Date : 下午10:00 2018/5/7
  */
 
