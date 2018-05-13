@@ -43,7 +43,7 @@ public class OrderMaster {
     private Integer orderStatus = OrderStatusEnum.NEW_ORDER.getCode();
 
     /**支付状态, 默认未支付.*/
-    private Integer payStatus = PayStatusEnum.NOT_PAYED.getCode();
+    private Integer payStatus = PayStatusEnum.WAIT.getCode();
 
     /**创建时间.*/
     private Date createTime;

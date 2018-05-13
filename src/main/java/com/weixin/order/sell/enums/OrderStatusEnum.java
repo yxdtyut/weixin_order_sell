@@ -9,7 +9,10 @@ import lombok.Getter;
  */
 @Getter
 public enum OrderStatusEnum {
-    NEW_ORDER(0,"新下单");
+    NEW_ORDER(0,"新下单"),
+    FINISH_ORDER(1,"已完结"),
+    CANSEL_ORDER(2,"已取消"),
+    ;
     private Integer code;
     private String msg;
 

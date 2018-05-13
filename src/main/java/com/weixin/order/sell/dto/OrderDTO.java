@@ -1,8 +1,11 @@
 package com.weixin.order.sell.dto;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import com.weixin.order.sell.dataobject.OrderDetail;
 import com.weixin.order.sell.enums.OrderStatusEnum;
 import com.weixin.order.sell.enums.PayStatusEnum;
+import com.weixin.order.sell.utils.serializer.Date2LongSerializer;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -15,6 +18,8 @@ import java.util.List;
  * @Date : 下午2:41 2018/5/9
  */
 @Data
+//@JsonSerialize(include = JsonSerialize.Inclusion.NON_NULL)
+//@JsonInclude(JsonInclude.Include.NON_NULL)
 public class OrderDTO {
     private String orderId;
 
@@ -39,12 +44,14 @@ public class OrderDTO {
     private Integer orderStatus = OrderStatusEnum.NEW_ORDER.getCode();
 
     /**支付状态, 默认未支付.*/
-    private Integer payStatus = PayStatusEnum.NOT_PAYED.getCode();
+    private Integer payStatus = PayStatusEnum.WAIT.getCode();
 
     /**创建时间.*/
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date createTime;
 
     /**修改时间.*/
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date updateTime;
 
     /**

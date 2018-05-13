@@ -9,7 +9,7 @@ import java.util.Random;
  */
 
 public class PrimaryKeyUtils {
-    public static String createKey() {
+    public static synchronized String createKey() {
         Integer id = new Random().nextInt(900000) + 100000;
         long l = System.currentTimeMillis();
         return String.valueOf(l + id);

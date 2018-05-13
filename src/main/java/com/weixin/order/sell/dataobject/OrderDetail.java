@@ -1,5 +1,7 @@
 package com.weixin.order.sell.dataobject;
 
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
+import com.weixin.order.sell.utils.serializer.Date2LongSerializer;
 import lombok.Data;
 import org.hibernate.annotations.DynamicUpdate;
 
@@ -39,9 +41,11 @@ public class OrderDetail {
     private String productIcon;
 
     /**创建时间.*/
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date createTime;
 
     /**修改时间.*/
+    @JsonSerialize(using = Date2LongSerializer.class)
     private Date updateTime;
 
 }

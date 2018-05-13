@@ -50,14 +50,14 @@ public class ProductInfoServiceImplTest {
     @Test
     public void save() {
         ProductInfo productInfo = new ProductInfo();
-        productInfo.setProductId("1234567");
-        productInfo.setProductName("韦德战衣");
-        productInfo.setProductPrice(new BigDecimal(6666));
-        productInfo.setProductDescription("this is my house");
+        productInfo.setProductId("12345678");
+        productInfo.setProductName("詹姆斯6代");
+        productInfo.setProductPrice(new BigDecimal(8888));
+        productInfo.setProductDescription("三旬老汉");
         productInfo.setProductIcon("http://xxxxxx.jsp");
         productInfo.setProductStatus(ProductInfoStatusEnum.NOMAL.getId());
-        productInfo.setCategoryType(5);
-        productInfo.setProductStock(9);
+        productInfo.setCategoryType(2);
+        productInfo.setProductStock(88);
         ProductInfo productInfo1 = service.save(productInfo);
         Assert.assertNotNull(productInfo1);
     }
